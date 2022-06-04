@@ -1,13 +1,72 @@
-html {
-    box-sizing: border-box;
+@import '_global';
+@import '_variables';
+
+.header {
+    &__inner {
+        height: 92px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-link {
+            @include orange-button;
+            margin-right: 36px;
+        }
+
+        &-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 10px 28px;
+            font-weight: 700;
+        }
+
+        &-button {
+            position: relative;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                background-image: url(../images/Person.svg);
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                top: 11px;
+            }
+        }
+    }
 }
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
+
+.logo {
+    margin-right: 60px;
 }
-body {
-    text-align: center;
-    background-color: aqua;
-    display: flex;
+
+.logo__img {}
+
+.menu {
+    &__list {
+        &-item {
+            display: inline-block;
+
+            &+& {
+                margin-left: 40px;
+            }
+
+            &__link {
+                font-weight: 700;
+            }
+        }
+    }
 }

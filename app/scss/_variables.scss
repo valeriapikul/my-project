@@ -1,0 +1,9 @@
+$bg-orange: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+
+@mixin orange-button {
+    font-weight: 700;
+    padding: 10px 40px;
+    background: $bg-orange;
+    color: #fff;
+    border-radius: 4px;
+}
